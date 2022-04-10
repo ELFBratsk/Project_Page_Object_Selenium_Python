@@ -20,4 +20,4 @@ class ProductPageLocators():
 # В файле locators.py создаем новый класс BasePageLocators и переносим туда соответствующие элементы:
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link") # изначально был селектор #login_link_ink (он не верен)
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link") # изначально был селектор #login_link_ink (и был не верен)

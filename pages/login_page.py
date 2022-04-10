@@ -19,4 +19,4 @@ class LoginPage(BasePage):
 
     def should_be_register_form(self):
         # реализуйте проверку, что есть форма регистрации на странице
-        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "register form is not presented"
+        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "register form is not presented" 
