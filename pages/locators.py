@@ -15,3 +15,9 @@ class ProductPageLocators():
     PRICE_ITEMS = (By.CSS_SELECTOR, "#content_inner .product_main .price_color") # цена книги
     PRICE_TO_BASKET = (By.CSS_SELECTOR, "#messages .alert .alertinner  > p > strong") # цена в корзине
     SUCCESS_MESSAGE = (By.CSS_SELECTOR,".alert-success") # сообщение об успешном добавлении в корзину (по селектору их 3)
+
+
+# В файле locators.py создаем новый класс BasePageLocators и переносим туда соответствующие элементы:
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link") # изначально был селектор #login_link_ink (он не верен)

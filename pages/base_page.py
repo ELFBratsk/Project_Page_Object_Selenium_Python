@@ -4,6 +4,7 @@ import math
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasePageLocators
 
 class BasePage():
     def __init__(self, browser, url, timeout=10): # В конструктор BasePage добавим команду для неявного ожидания со значением по умолчанию в 10:
@@ -54,3 +55,11 @@ class BasePage():
             return False
 
         return True
+    
+    # В файл base_page.py переносим соответствующие методы, заменяя класс с локаторами на BasePageLocators:  
+    def go_to_login_page(self):
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
+        link.click()
+
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
